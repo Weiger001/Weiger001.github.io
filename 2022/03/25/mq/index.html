@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title> - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="
+title: My awesome titledate: 2022-3-25tags:    - ROCKETMQ    - 前端cover: http://domain.com/awesome.,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content=" - Hexo"/>
+    <meta name="twitter:description" content="
+title: My awesome titledate: 2022-3-25tags:    - ROCKETMQ    - 前端cover: http://domain.com/awesome.,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content=" - Hexo"/>
+    <meta property="og:description" content="
+title: My awesome titledate: 2022-3-25tags:    - ROCKETMQ    - 前端cover: http://domain.com/awesome.,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle"></h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title"></h1>
+        <div class="stuff">
+            <span>三月 25, 2022</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <hr>
+<p>title: My awesome title<br>date: 2022-3-25<br>tags:<br>    - ROCKETMQ<br>    - 前端<br>cover: <a target="_blank" rel="noopener" href="http://domain.com/awesome.jpg">http://domain.com/awesome.jpg</a></p>
+<hr>
+<h1 id="2022-3-25"><a href="#2022-3-25" class="headerlink" title="2022-3-25"></a>2022-3-25</h1><h2 id="ROCKETMQ"><a href="#ROCKETMQ" class="headerlink" title="ROCKETMQ"></a>ROCKETMQ</h2><h5 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h5><blockquote>
+<p>D:\maven\rocketmq\rocketmq-all-4.3.0-bin-release\bin</p>
+</blockquote>
+<h3 id="具体命令"><a href="#具体命令" class="headerlink" title="具体命令"></a>具体命令</h3><ul>
+<li><blockquote>
+<p>start mqnamesrv.cmd</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>start mqbroker.cmd -n 127.0.0.1:9876 autoCreateTopicEnable=true</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>mqshutdown.cmd broker</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>mqshutdown.cmd namesrv</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="配置修改"><a href="#配置修改" class="headerlink" title="配置修改"></a>配置修改</h4><ul>
+<li><blockquote>
+<p>nameSrvAddr = 127.0.0.1:9876</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>brokerIP1 = 127.0.0.1</p>
+</blockquote>
+</li>
+</ul>
+<p>修改配置后要杀死rocketmq的Broker重新启动mq服务</p>
+<p>并且加上<code> -c ../conf/broker.conf</code></p>
+<h3 id="可视化插件rocketmq-console"><a href="#可视化插件rocketmq-console" class="headerlink" title="可视化插件rocketmq-console"></a>可视化插件rocketmq-console</h3><h5 id="目录-1"><a href="#目录-1" class="headerlink" title="目录"></a>目录</h5><blockquote>
+<p>D:\maven\rocketmq\rocketmq-externals-master\rocketmq-console</p>
+</blockquote>
+<h5 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h5><blockquote>
+<p>D:\maven\rocketmq\rocketmq-externals-master\rocketmq-console\src\main\resources\application.properties</p>
+</blockquote>
+<h5 id="配置修改-1"><a href="#配置修改-1" class="headerlink" title="配置修改"></a>配置修改</h5><ul>
+<li><blockquote>
+<p>server.port=8066</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>rocketmq.config.namesrvAddr=127.0.0.1:9876</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="运行命令"><a href="#运行命令" class="headerlink" title="运行命令"></a>运行命令</h4><p>在console目录下打包<code>mvn clean package -Dmaven.test.skip=true</code></p>
+<p><strong>注</strong>windows powershell<code>mvn clean package &#39;-Dmaven.test.skip=true&#39;</code></p>
+<ul>
+<li><blockquote>
+<p>D:\maven\rocketmq\rocketmq-externals-master\rocketmq-console\target</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>java -jar rocketmq-console-ng-1.0.1.jar</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="cmd截图"><a href="#cmd截图" class="headerlink" title="cmd截图"></a>cmd截图</h3><p><img src="pic/mq_cmd.png" alt="blockchain"></p>
+<h3 id="余留问题"><a href="#余留问题" class="headerlink" title="余留问题"></a>余留问题</h3><ul>
+<li>rocket的maven包没有打包到本地maven库，<del>项目中的引用实现方式未知</del></li>
+<li>根据官网模拟的通讯运行似乎可以进行数据的发送和接受，但具体详情并不了解，消费者信息已经可以查询到，生产者并没有数据，<strong>发送的数据都分配到了1，3队列</strong><strong>comsumer代码</strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;</span><br><span class="line">import org.apache.rocketmq.client.consumer.listener.ConsumeOrderlyContext;</span><br><span class="line">import org.apache.rocketmq.client.consumer.listener.ConsumeOrderlyStatus;</span><br><span class="line">import org.apache.rocketmq.client.consumer.listener.MessageListenerOrderly;</span><br><span class="line">import org.apache.rocketmq.common.consumer.ConsumeFromWhere;</span><br><span class="line">import org.apache.rocketmq.common.message.MessageExt;</span><br><span class="line"></span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.Random;</span><br><span class="line">import java.util.concurrent.TimeUnit;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 顺序消息消费，带事务方式（应用可控制Offset什么时候提交）</span><br><span class="line">*/</span><br><span class="line">public class ConsumerInOrder &#123;</span><br><span class="line"></span><br><span class="line">public static void main(String[] args) throws Exception &#123;</span><br><span class="line">    DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(&quot;please_rename_unique_group_name_3&quot;);</span><br><span class="line">    consumer.setNamesrvAddr(&quot;127.0.0.1:9876&quot;);</span><br><span class="line">    /**</span><br><span class="line">     * 设置Consumer第一次启动是从队列头部开始消费还是队列尾部开始消费&lt;br&gt;</span><br><span class="line">     * 如果非第一次启动，那么按照上次消费的位置继续消费</span><br><span class="line">     */</span><br><span class="line">    consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);</span><br><span class="line"></span><br><span class="line">    consumer.subscribe(&quot;TopicTest&quot;, &quot;TagA || TagC || TagD&quot;);</span><br><span class="line"></span><br><span class="line">    consumer.registerMessageListener(new MessageListenerOrderly() &#123;</span><br><span class="line"></span><br><span class="line">        Random random = new Random();</span><br><span class="line"></span><br><span class="line">        @Override</span><br><span class="line">        public ConsumeOrderlyStatus consumeMessage(List&lt;MessageExt&gt; msgs, ConsumeOrderlyContext context) &#123;</span><br><span class="line">            context.setAutoCommit(true);</span><br><span class="line">            for (MessageExt msg : msgs) &#123;</span><br><span class="line">                // 可以看到每个queue有唯一的consume线程来消费, 订单对每个queue(分区)有序</span><br><span class="line">                System.out.println(&quot;consumeThread=&quot; + Thread.currentThread().getName() + &quot;queueId=&quot; + msg.getQueueId() + &quot;, content:&quot; + new String(msg.getBody()));</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            try &#123;</span><br><span class="line">                //模拟业务逻辑处理中...</span><br><span class="line">                TimeUnit.SECONDS.sleep(random.nextInt(10));</span><br><span class="line">            &#125; catch (Exception e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">            return ConsumeOrderlyStatus.SUCCESS;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    consumer.start();</span><br><span class="line"></span><br><span class="line">    System.out.println(&quot;Consumer Started.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br></pre></td></tr></table></figure></li>
+</ul>
+<pre><code>**produce代码**
+</code></pre>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br></pre></td><td class="code"><pre><span class="line">    public class Producer &#123;</span><br><span class="line"></span><br><span class="line">public static void main(String[] args) throws Exception &#123;</span><br><span class="line">    DefaultMQProducer producer = new DefaultMQProducer(&quot;please_rename_unique_group_name&quot;);</span><br><span class="line"></span><br><span class="line">    producer.setNamesrvAddr(&quot;127.0.0.1:9876&quot;);</span><br><span class="line"></span><br><span class="line">    producer.start();</span><br><span class="line"></span><br><span class="line">    String[] tags = new String[]&#123;&quot;TagA&quot;, &quot;TagC&quot;, &quot;TagD&quot;&#125;;</span><br><span class="line"></span><br><span class="line">    // 订单列表</span><br><span class="line">    List&lt;OrderStep&gt; orderList = new Producer().buildOrders();</span><br><span class="line"></span><br><span class="line">    Date date = new Date();</span><br><span class="line">    SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);</span><br><span class="line">    String dateStr = sdf.format(date);</span><br><span class="line">    for (int i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">        // 加个时间前缀</span><br><span class="line">        String body = dateStr + &quot; Hello RocketMQ &quot; + orderList.get(i);</span><br><span class="line">        Message msg = new Message(&quot;TopicTest&quot;, tags[i % tags.length], &quot;KEY&quot; + i, body.getBytes());</span><br><span class="line"></span><br><span class="line">        SendResult sendResult = producer.send(msg, new MessageQueueSelector() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public MessageQueue select(List&lt;MessageQueue&gt; mqs, Message msg, Object arg) &#123;</span><br><span class="line">                Long id = (Long) arg;  //根据订单id选择发送queue</span><br><span class="line">                long index = id % mqs.size();</span><br><span class="line">                return mqs.get((int) index);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, orderList.get(i).getOrderId());//订单id</span><br><span class="line"></span><br><span class="line">        System.out.println(String.format(&quot;SendResult status:%s, queueId:%d, body:%s&quot;,</span><br><span class="line">                sendResult.getSendStatus(),</span><br><span class="line">                sendResult.getMessageQueue().getQueueId(),</span><br><span class="line">                body));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    producer.shutdown();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 订单的步骤</span><br><span class="line"> */</span><br><span class="line">private static class OrderStep &#123;</span><br><span class="line">    private long orderId;</span><br><span class="line">    private String desc;</span><br><span class="line"></span><br><span class="line">    public long getOrderId() &#123;</span><br><span class="line">        return orderId;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setOrderId(long orderId) &#123;</span><br><span class="line">        this.orderId = orderId;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getDesc() &#123;</span><br><span class="line">        return desc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setDesc(String desc) &#123;</span><br><span class="line">        this.desc = desc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;OrderStep&#123;&quot; +</span><br><span class="line">                &quot;orderId=&quot; + orderId +</span><br><span class="line">                &quot;, desc=&#x27;&quot; + desc + &#x27;\&#x27;&#x27; +</span><br><span class="line">                &#x27;&#125;&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 生成模拟订单数据</span><br><span class="line"> */</span><br><span class="line">private List&lt;OrderStep&gt; buildOrders() &#123;</span><br><span class="line">    List&lt;OrderStep&gt; orderList = new ArrayList&lt;OrderStep&gt;();</span><br><span class="line"></span><br><span class="line">    OrderStep orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103111039L);</span><br><span class="line">    orderDemo.setDesc(&quot;创建&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103111065L);</span><br><span class="line">    orderDemo.setDesc(&quot;创建&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103111039L);</span><br><span class="line">    orderDemo.setDesc(&quot;付款&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103117235L);</span><br><span class="line">    orderDemo.setDesc(&quot;创建&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103111065L);</span><br><span class="line">    orderDemo.setDesc(&quot;付款&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103117235L);</span><br><span class="line">    orderDemo.setDesc(&quot;付款&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103111065L);</span><br><span class="line">    orderDemo.setDesc(&quot;完成&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103111039L);</span><br><span class="line">    orderDemo.setDesc(&quot;推送&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103117235L);</span><br><span class="line">    orderDemo.setDesc(&quot;完成&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103111039L);</span><br><span class="line">    orderDemo.setDesc(&quot;完成&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    return orderList;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><del>可视化的rocketmq插件没有配置成功，接收不到生产和接受的信息数据</del></li>
+<li><del>版本混乱，本地已配置mq，项目中导入的似乎不是本地的mq，配置混乱</del></li>
+<li>项目中引用的dependcy依赖只是java rocketmq库，运行还是依赖于本地的rocketmq环境</li>
+</ul>
+<h2 id="尾气平台"><a href="#尾气平台" class="headerlink" title="尾气平台"></a>尾气平台</h2><ul>
+<li>1.SCR上游/下游NOX图表</li>
+<li>2.SCR入口/出口温度图表</li>
+<li>3.DPF压差图表</li>
+<li>4.EGR阀开度对比四个功能在同一个接口实现，没有对数据进行编号筛选，只进行了对时间的筛选,startTime,endTime。</li>
+</ul>
+<h2 id="电池管理平台"><a href="#电池管理平台" class="headerlink" title="电池管理平台"></a>电池管理平台</h2><h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><h4 id="customFooTable"><a href="#customFooTable" class="headerlink" title="customFooTable"></a>customFooTable</h4><blockquote>
+<p>customFooTable调用的接口返回类型得是Corepage类型，得到corepae类型表格会自动填充,dao层调用findbyHql(Corepage,String),并且返回的字段要和table的字段名称相同</p>
+</blockquote>
+<h4 id="输入框向后台传入参数"><a href="#输入框向后台传入参数" class="headerlink" title="输入框向后台传入参数"></a>输入框向后台传入参数</h4><blockquote>
+<p>input输入框不输入值会默认传””，<strong>而不是null</strong>，option选择默认值不设定value传给后台的就是null</p>
+</blockquote>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
