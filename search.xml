@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/03/25/hello-world/</url>
+    <content><![CDATA[<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><p><strong>这是加粗的文字</strong></p>
+<p><em>这是倾斜的文字</em>`</p>
+<p><em><strong>这是斜体加粗的文字</strong></em></p>
+<p><del>这是加删除线的文字</del></p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>这是引用的内容</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<hr>
+<hr>
+<hr>
+<p>![blockchain](<a href="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/">https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/</a><br>u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg “区块链”)</p>
+<p><a href="http://jianshu.com/">简书</a></p>
+<p><a href="http://baidu.com/">百度</a></p>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<ol>
+<li>列表内容</li>
+<li>列表内容</li>
+<li>列表内容</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th align="center">技能</th>
+<th align="right">排行</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>刘备</td>
+<td align="center">哭</td>
+<td align="right">大哥</td>
+</tr>
+<tr>
+<td>关羽</td>
+<td align="center">打</td>
+<td align="right">二哥</td>
+</tr>
+<tr>
+<td>张飞</td>
+<td align="center">骂</td>
+<td align="right">三弟</td>
+</tr>
+</tbody></table>
+<p><code>create database hero;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function fun()&#123;</span><br><span class="line">     echo &quot;这是一句非常牛逼的代码&quot;;</span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>My awesome title</title>
+    <url>/2022/03/25/mq/</url>
+    <content><![CDATA[<h1 id="2022-3-25"><a href="#2022-3-25" class="headerlink" title="2022-3-25"></a>2022-3-25</h1><h2 id="ROCKETMQ"><a href="#ROCKETMQ" class="headerlink" title="ROCKETMQ"></a>ROCKETMQ</h2><h5 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h5><blockquote>
+<p>D:\maven\rocketmq\rocketmq-all-4.3.0-bin-release\bin</p>
+</blockquote>
+<h3 id="具体命令"><a href="#具体命令" class="headerlink" title="具体命令"></a>具体命令</h3><ul>
+<li><blockquote>
+<p>start mqnamesrv.cmd</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>start mqbroker.cmd -n 127.0.0.1:9876 autoCreateTopicEnable=true</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>mqshutdown.cmd broker</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>mqshutdown.cmd namesrv</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="配置修改"><a href="#配置修改" class="headerlink" title="配置修改"></a>配置修改</h4><ul>
+<li><blockquote>
+<p>nameSrvAddr = 127.0.0.1:9876</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>brokerIP1 = 127.0.0.1</p>
+</blockquote>
+</li>
+</ul>
+<p>修改配置后要杀死rocketmq的Broker重新启动mq服务</p>
+<p>并且加上<code> -c ../conf/broker.conf</code></p>
+<h3 id="可视化插件rocketmq-console"><a href="#可视化插件rocketmq-console" class="headerlink" title="可视化插件rocketmq-console"></a>可视化插件rocketmq-console</h3><h5 id="目录-1"><a href="#目录-1" class="headerlink" title="目录"></a>目录</h5><blockquote>
+<p>D:\maven\rocketmq\rocketmq-externals-master\rocketmq-console</p>
+</blockquote>
+<h5 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h5><blockquote>
+<p>D:\maven\rocketmq\rocketmq-externals-master\rocketmq-console\src\main\resources\application.properties</p>
+</blockquote>
+<h5 id="配置修改-1"><a href="#配置修改-1" class="headerlink" title="配置修改"></a>配置修改</h5><ul>
+<li><blockquote>
+<p>server.port=8066</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>rocketmq.config.namesrvAddr=127.0.0.1:9876</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="运行命令"><a href="#运行命令" class="headerlink" title="运行命令"></a>运行命令</h4><p>在console目录下打包<code>mvn clean package -Dmaven.test.skip=true</code></p>
+<p><strong>注</strong>windows powershell<code>mvn clean package &#39;-Dmaven.test.skip=true&#39;</code></p>
+<ul>
+<li><blockquote>
+<p>D:\maven\rocketmq\rocketmq-externals-master\rocketmq-console\target</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>java -jar rocketmq-console-ng-1.0.1.jar</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="cmd截图"><a href="#cmd截图" class="headerlink" title="cmd截图"></a>cmd截图</h3><p><img src="/img/mq_cmd.png" alt="**"></p>
+<h3 id="余留问题"><a href="#余留问题" class="headerlink" title="余留问题"></a>余留问题</h3><ul>
+<li>rocket的maven包没有打包到本地maven库，<del>项目中的引用实现方式未知</del></li>
+<li>根据官网模拟的通讯运行似乎可以进行数据的发送和接受，但具体详情并不了解，消费者信息已经可以查询到，生产者并没有数据，<strong>发送的数据都分配到了1，3队列</strong><strong>comsumer代码</strong><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  </span><br><span class="line">import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;</span><br><span class="line">import org.apache.rocketmq.client.consumer.listener.ConsumeOrderlyContext;</span><br><span class="line">import org.apache.rocketmq.client.consumer.listener.ConsumeOrderlyStatus;</span><br><span class="line">import org.apache.rocketmq.client.consumer.listener.MessageListenerOrderly;</span><br><span class="line">import org.apache.rocketmq.common.consumer.ConsumeFromWhere;</span><br><span class="line">import org.apache.rocketmq.common.message.MessageExt;</span><br><span class="line"></span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.Random;</span><br><span class="line">import java.util.concurrent.TimeUnit;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 顺序消息消费，带事务方式（应用可控制Offset什么时候提交）</span><br><span class="line">*/</span><br><span class="line">public class ConsumerInOrder &#123;</span><br><span class="line"></span><br><span class="line">public static void main(String[] args) throws Exception &#123;</span><br><span class="line">    DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(&quot;please_rename_unique_group_name_3&quot;);</span><br><span class="line">    consumer.setNamesrvAddr(&quot;127.0.0.1:9876&quot;);</span><br><span class="line">    /**</span><br><span class="line">     * 设置Consumer第一次启动是从队列头部开始消费还是队列尾部开始消费&lt;br&gt;</span><br><span class="line">     * 如果非第一次启动，那么按照上次消费的位置继续消费</span><br><span class="line">     */</span><br><span class="line">    consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);</span><br><span class="line"></span><br><span class="line">    consumer.subscribe(&quot;TopicTest&quot;, &quot;TagA || TagC || TagD&quot;);</span><br><span class="line"></span><br><span class="line">    consumer.registerMessageListener(new MessageListenerOrderly() &#123;</span><br><span class="line"></span><br><span class="line">        Random random = new Random();</span><br><span class="line"></span><br><span class="line">        @Override</span><br><span class="line">        public ConsumeOrderlyStatus consumeMessage(List&lt;MessageExt&gt; msgs, ConsumeOrderlyContext context) &#123;</span><br><span class="line">            context.setAutoCommit(true);</span><br><span class="line">            for (MessageExt msg : msgs) &#123;</span><br><span class="line">                // 可以看到每个queue有唯一的consume线程来消费, 订单对每个queue(分区)有序</span><br><span class="line">                System.out.println(&quot;consumeThread=&quot; + Thread.currentThread().getName() + &quot;queueId=&quot; + msg.getQueueId() + &quot;, content:&quot; + new String(msg.getBody()));</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            try &#123;</span><br><span class="line">                //模拟业务逻辑处理中...</span><br><span class="line">                TimeUnit.SECONDS.sleep(random.nextInt(10));</span><br><span class="line">            &#125; catch (Exception e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">            return ConsumeOrderlyStatus.SUCCESS;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    consumer.start();</span><br><span class="line"></span><br><span class="line">    System.out.println(&quot;Consumer Started.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br></pre></td></tr></table></figure></li>
+</ul>
+<pre><code>**produce代码**
+</code></pre>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    public class Producer &#123;</span><br><span class="line"></span><br><span class="line">public static void main(String[] args) throws Exception &#123;</span><br><span class="line">    DefaultMQProducer producer = new DefaultMQProducer(&quot;please_rename_unique_group_name&quot;);</span><br><span class="line"></span><br><span class="line">    producer.setNamesrvAddr(&quot;127.0.0.1:9876&quot;);</span><br><span class="line"></span><br><span class="line">    producer.start();</span><br><span class="line"></span><br><span class="line">    String[] tags = new String[]&#123;&quot;TagA&quot;, &quot;TagC&quot;, &quot;TagD&quot;&#125;;</span><br><span class="line"></span><br><span class="line">    // 订单列表</span><br><span class="line">    List&lt;OrderStep&gt; orderList = new Producer().buildOrders();</span><br><span class="line"></span><br><span class="line">    Date date = new Date();</span><br><span class="line">    SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);</span><br><span class="line">    String dateStr = sdf.format(date);</span><br><span class="line">    for (int i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">        // 加个时间前缀</span><br><span class="line">        String body = dateStr + &quot; Hello RocketMQ &quot; + orderList.get(i);</span><br><span class="line">        Message msg = new Message(&quot;TopicTest&quot;, tags[i % tags.length], &quot;KEY&quot; + i, body.getBytes());</span><br><span class="line"></span><br><span class="line">        SendResult sendResult = producer.send(msg, new MessageQueueSelector() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public MessageQueue select(List&lt;MessageQueue&gt; mqs, Message msg, Object arg) &#123;</span><br><span class="line">                Long id = (Long) arg;  //根据订单id选择发送queue</span><br><span class="line">                long index = id % mqs.size();</span><br><span class="line">                return mqs.get((int) index);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, orderList.get(i).getOrderId());//订单id</span><br><span class="line"></span><br><span class="line">        System.out.println(String.format(&quot;SendResult status:%s, queueId:%d, body:%s&quot;,</span><br><span class="line">                sendResult.getSendStatus(),</span><br><span class="line">                sendResult.getMessageQueue().getQueueId(),</span><br><span class="line">                body));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    producer.shutdown();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 订单的步骤</span><br><span class="line"> */</span><br><span class="line">private static class OrderStep &#123;</span><br><span class="line">    private long orderId;</span><br><span class="line">    private String desc;</span><br><span class="line"></span><br><span class="line">    public long getOrderId() &#123;</span><br><span class="line">        return orderId;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setOrderId(long orderId) &#123;</span><br><span class="line">        this.orderId = orderId;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getDesc() &#123;</span><br><span class="line">        return desc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setDesc(String desc) &#123;</span><br><span class="line">        this.desc = desc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;OrderStep&#123;&quot; +</span><br><span class="line">                &quot;orderId=&quot; + orderId +</span><br><span class="line">                &quot;, desc=&#x27;&quot; + desc + &#x27;\&#x27;&#x27; +</span><br><span class="line">                &#x27;&#125;&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 生成模拟订单数据</span><br><span class="line"> */</span><br><span class="line">private List&lt;OrderStep&gt; buildOrders() &#123;</span><br><span class="line">    List&lt;OrderStep&gt; orderList = new ArrayList&lt;OrderStep&gt;();</span><br><span class="line"></span><br><span class="line">    OrderStep orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103111039L);</span><br><span class="line">    orderDemo.setDesc(&quot;创建&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103111065L);</span><br><span class="line">    orderDemo.setDesc(&quot;创建&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103111039L);</span><br><span class="line">    orderDemo.setDesc(&quot;付款&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103117235L);</span><br><span class="line">    orderDemo.setDesc(&quot;创建&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103111065L);</span><br><span class="line">    orderDemo.setDesc(&quot;付款&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103117235L);</span><br><span class="line">    orderDemo.setDesc(&quot;付款&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103111065L);</span><br><span class="line">    orderDemo.setDesc(&quot;完成&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103111039L);</span><br><span class="line">    orderDemo.setDesc(&quot;推送&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103117235L);</span><br><span class="line">    orderDemo.setDesc(&quot;完成&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    orderDemo = new OrderStep();</span><br><span class="line">    orderDemo.setOrderId(15103111039L);</span><br><span class="line">    orderDemo.setDesc(&quot;完成&quot;);</span><br><span class="line">    orderList.add(orderDemo);</span><br><span class="line"></span><br><span class="line">    return orderList;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><del>可视化的rocketmq插件没有配置成功，接收不到生产和接受的信息数据</del></li>
+<li><del>版本混乱，本地已配置mq，项目中导入的似乎不是本地的mq，配置混乱</del></li>
+<li>项目中引用的dependcy依赖只是java rocketmq库，运行还是依赖于本地的rocketmq环境</li>
+</ul>
+<h2 id="尾气平台"><a href="#尾气平台" class="headerlink" title="尾气平台"></a>尾气平台</h2><ul>
+<li>1.SCR上游/下游NOX图表</li>
+<li>2.SCR入口/出口温度图表</li>
+<li>3.DPF压差图表</li>
+<li>4.EGR阀开度对比四个功能在同一个接口实现，没有对数据进行编号筛选，只进行了对时间的筛选,startTime,endTime。</li>
+</ul>
+<h2 id="电池管理平台"><a href="#电池管理平台" class="headerlink" title="电池管理平台"></a>电池管理平台</h2><h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><h4 id="customFooTable"><a href="#customFooTable" class="headerlink" title="customFooTable"></a>customFooTable</h4><blockquote>
+<p>customFooTable调用的接口返回类型得是Corepage类型，得到corepae类型表格会自动填充,dao层调用findbyHql(Corepage,String),并且返回的字段要和table的字段名称相同</p>
+</blockquote>
+<h4 id="输入框向后台传入参数"><a href="#输入框向后台传入参数" class="headerlink" title="输入框向后台传入参数"></a>输入框向后台传入参数</h4><blockquote>
+<p>input输入框不输入值会默认传””，<strong>而不是null</strong>，option选择默认值不设定value传给后台的就是null</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>ROCKETMQ</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+</search>
