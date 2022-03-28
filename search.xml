@@ -163,8 +163,9 @@
 <li>1.SCR上游/下游NOX图表</li>
 <li>2.SCR入口/出口温度图表</li>
 <li>3.DPF压差图表</li>
-<li>4.EGR阀开度对比四个功能在同一个接口实现，没有对数据进行编号筛选，只进行了对时间的筛选,startTime,endTime。</li>
+<li>4.EGR阀开度对比</li>
 </ul>
+<p>四个功能在同一个接口实现，没有对数据进行编号筛选，只进行了对时间的筛选,startTime,endTime。</p>
 <h2 id="电池管理平台"><a href="#电池管理平台" class="headerlink" title="电池管理平台"></a>电池管理平台</h2><h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><h4 id="customFooTable"><a href="#customFooTable" class="headerlink" title="customFooTable"></a>customFooTable</h4><blockquote>
 <p>customFooTable调用的接口返回类型得是Corepage类型，得到corepae类型表格会自动填充,dao层调用findbyHql(Corepage,String),并且返回的字段要和table的字段名称相同</p>
 </blockquote>
@@ -175,6 +176,55 @@
       <tags>
         <tag>ROCKETMQ</tag>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2022-3-26</title>
+    <url>/2022/03/26/mq2/</url>
+    <content><![CDATA[<h1 id="2022-3-25"><a href="#2022-3-25" class="headerlink" title="2022-3-25"></a>2022-3-25</h1><h2 id="ROCKETMQ"><a href="#ROCKETMQ" class="headerlink" title="ROCKETMQ"></a>ROCKETMQ</h2><h4 id="配置修改"><a href="#配置修改" class="headerlink" title="配置修改"></a>配置修改</h4><ul>
+<li><blockquote>
+<p>nameSrvAddr = 150.158.141.106:9876</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>brokerIP1 = 150.158.141.106</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="具体命令"><a href="#具体命令" class="headerlink" title="具体命令"></a>具体命令</h3><ul>
+<li><blockquote>
+<p>start mqnamesrv.cmd</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>start mqbroker.cmd -n 150.158.141.106:9876 autoCreateTopicEnable=true</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>start mqbroker.cmd -n 150.158.141.106:9876 -c ../conf/broker.conf</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>mqshutdown.cmd broker</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>mqshutdown.cmd namesrv</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>mqadmin topicList -n 150.158.141.106:9876</p>
+</blockquote>
+</li>
+</ul>
+<p>报错<code>connect to &lt;NULL&gt; failed</code>，不知道是哪里的配置有问题，奇怪的报错</p>
+<p>有一个看着看不懂的回答<code>这是网络Ip的问题哈，docker 启动 rocket mq的namser server之后，是一个vip，而broker 呢需要连接真实的ip，真实的生产环境中完全都是宿主机来部署的，不可能集成到容器中 </code></p>
+<p><code>NettyRemotingClient在channel出现问题的时候会抛出RemotingConnectException</code>这是抛出的异常解析，关键并不理解channel</p>
+<p>实在没得进度最后附上<a href="https://blog.csdn.net/tales522/article/details/88094446">rocketmq常用cmd操作</a></p>
+]]></content>
+      <tags>
+        <tag>ROCKETMQ</tag>
+        <tag>MQ</tag>
       </tags>
   </entry>
 </search>
