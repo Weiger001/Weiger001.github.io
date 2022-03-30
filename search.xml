@@ -235,10 +235,10 @@
 <ol>
 <li>本地解压jacob</li>
 <li>jacob-1.20-x64.dll放在sys32中</li>
-<li>项目中导入jacob的包<img src="/pic/idea_jacob.png" alt="*"></li>
+<li>项目中导入jacob的包<img src="/img/idea_jacob.png" alt="*"></li>
 </ol>
 <p><code>word.openDocument(path)</code>打开本地word文件，目前只支持对已有表格的扩充</p>
-<p><img src="/pic/sql_doc.png" alt="*"></p>
+<p><img src="/img/sql_doc.png" alt="*"></p>
 <p>由于表格格式，表格前几行和后面是分开处理，表名英文是直接写入，从第六行后面扩充数据库字段，也就是说文档需要初始化表格6-7行，最好7行。</p>
 <h4 id="文档初始化"><a href="#文档初始化" class="headerlink" title="文档初始化"></a>文档初始化</h4><p>初始文档需要有和数据库表数量的同等数量表格，并且是需要开头的变更记录表格，<strong>因为填充是从word文档第二张开始的</strong>，<code>// 循环获取表格 for(int i=2;i&lt;=tablesCount;i++)</code>。</p>
 <h4 id="文档填充"><a href="#文档填充" class="headerlink" title="文档填充"></a>文档填充</h4><p>目前的填充方案就是字段和对应的类型和长度直接从数据库提取，中文字段名和说明共同是数据库中的注释部分，想着进一步对数据库的注释做补全，例如再中文字段名和说明之间加上符号，例如 <code>状态||0正确，1错误</code>这种，我这边拿到再分割处理一下又省事了一点，<strong>但处于某种不可抗力因素暂时耽搁</strong>。</p>
