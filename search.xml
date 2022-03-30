@@ -179,9 +179,9 @@
       </tags>
   </entry>
   <entry>
-    <title>2022-3-26</title>
-    <url>/2022/03/26/mq2/</url>
-    <content><![CDATA[<h1 id="2022-3-25"><a href="#2022-3-25" class="headerlink" title="2022-3-25"></a>2022-3-25</h1><h2 id="ROCKETMQ"><a href="#ROCKETMQ" class="headerlink" title="ROCKETMQ"></a>ROCKETMQ</h2><h4 id="配置修改"><a href="#配置修改" class="headerlink" title="配置修改"></a>配置修改</h4><ul>
+    <title>2022-3-28</title>
+    <url>/2022/03/28/mq2/</url>
+    <content><![CDATA[<h1 id="2022-3-28"><a href="#2022-3-28" class="headerlink" title="2022-3-28"></a>2022-3-28</h1><h2 id="ROCKETMQ"><a href="#ROCKETMQ" class="headerlink" title="ROCKETMQ"></a>ROCKETMQ</h2><h4 id="配置修改"><a href="#配置修改" class="headerlink" title="配置修改"></a>配置修改</h4><ul>
 <li><blockquote>
 <p>nameSrvAddr = 150.158.141.106:9876</p>
 </blockquote>
@@ -221,10 +221,51 @@
 <p>有一个看着看不懂的回答<code>这是网络Ip的问题哈，docker 启动 rocket mq的namser server之后，是一个vip，而broker 呢需要连接真实的ip，真实的生产环境中完全都是宿主机来部署的，不可能集成到容器中 </code></p>
 <p><code>NettyRemotingClient在channel出现问题的时候会抛出RemotingConnectException</code>这是抛出的异常解析，关键并不理解channel</p>
 <p>实在没得进度最后附上<a href="https://blog.csdn.net/tales522/article/details/88094446">rocketmq常用cmd操作</a></p>
+<p>还是回头补一句环境真搞人，一天下来本地没改最后快下班就成功了，真的是莫名其妙的浪费了一天时间，报锤子错</p>
 ]]></content>
       <tags>
         <tag>ROCKETMQ</tag>
         <tag>MQ</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2022-3-30</title>
+    <url>/2022/03/30/2022-3-30/</url>
+    <content><![CDATA[<h1 id="2022-3-30"><a href="#2022-3-30" class="headerlink" title="2022-3-30"></a>2022-3-30</h1><h2 id="Jacob"><a href="#Jacob" class="headerlink" title="Jacob"></a>Jacob</h2><p>之前写数据库文档写的一个小demo，昨天使用突然忘记了一些配置，好记性不如烂笔头</p>
+<ol>
+<li>本地解压jacob</li>
+<li>jacob-1.20-x64.dll放在sys32中</li>
+<li>项目中导入jacob的包<img src="/pic/idea_jacob.png" alt="*"></li>
+</ol>
+<p><code>word.openDocument(path)</code>打开本地word文件，目前只支持对已有表格的扩充</p>
+<p><img src="/pic/sql_doc.png" alt="*"></p>
+<p>由于表格格式，表格前几行和后面是分开处理，表名英文是直接写入，从第六行后面扩充数据库字段，也就是说文档需要初始化表格6-7行，最好7行。</p>
+<h4 id="文档初始化"><a href="#文档初始化" class="headerlink" title="文档初始化"></a>文档初始化</h4><p>初始文档需要有和数据库表数量的同等数量表格，并且是需要开头的变更记录表格，<strong>因为填充是从word文档第二张开始的</strong>，<code>// 循环获取表格 for(int i=2;i&lt;=tablesCount;i++)</code>。</p>
+<h4 id="文档填充"><a href="#文档填充" class="headerlink" title="文档填充"></a>文档填充</h4><p>目前的填充方案就是字段和对应的类型和长度直接从数据库提取，中文字段名和说明共同是数据库中的注释部分，想着进一步对数据库的注释做补全，例如再中文字段名和说明之间加上符号，例如 <code>状态||0正确，1错误</code>这种，我这边拿到再分割处理一下又省事了一点，<strong>但处于某种不可抗力因素暂时耽搁</strong>。</p>
+<h3 id="遗留问题"><a href="#遗留问题" class="headerlink" title="遗留问题"></a>遗留问题</h3><ul>
+<li>查询数据库时候可以查询到服务器所有数据的表，导致运行需要大量的时间并且需要我手动的去进行去重，问题是由</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static List&lt;String&gt; getTableNames() &#123;</span><br><span class="line">    List&lt;String&gt; tableNames = new ArrayList&lt;&gt;();</span><br><span class="line">    Connection conn = getConnection();</span><br><span class="line">    ResultSet rs = null;</span><br><span class="line">    try &#123;</span><br><span class="line">        //获取数据库的元数据</span><br><span class="line">        DatabaseMetaData db = conn.getMetaData();</span><br><span class="line"></span><br><span class="line">        //从元数据中获取到所有的表名</span><br><span class="line">        rs = db.getTables(null, null, null, new String[] &#123; &quot;TABLE&quot; &#125;);</span><br><span class="line">        while(rs.next()) &#123;</span><br><span class="line">            tableNames.add(rs.getString(3));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; catch (SQLException e) &#123;</span><br><span class="line"></span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            rs.close();</span><br><span class="line">            closeConnection(conn);</span><br><span class="line">        &#125; catch (SQLException e) &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return tableNames;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>这一部分导致，感觉问题出再获取数据库的元数据，但是不知道具体原因暂时搁置（<del>能跑就行</del>）</p>
+<ul>
+<li><p>还有就是tinyint类型读取出来是bit,这个也不太理解，但是我手动改成了tinyint（<del>能跑就行</del>）</p>
+</li>
+<li><p>最后问题是最难缠的，再读取int类型长度的时候读取不出来，所有的int长度都是10（<del>好像是</del>），只能去进行手动修改，这个问题比较烦人，而且感觉没什么头绪，所有暂时搁置，等待进一步研究修改。</p>
+</li>
+</ul>
+<h3 id="小说明"><a href="#小说明" class="headerlink" title="小说明"></a>小说明</h3><p>不是个什么好东西，勉勉强强凑合着用吧，总比CV好。</p>
+<h2 id="RokcetMQ"><a href="#RokcetMQ" class="headerlink" title="RokcetMQ"></a>RokcetMQ</h2><p>包装成了一个task的任务<code>extends Thread implements ApplicationListener&lt;ContextRefreshedEvent&gt;</code><br>继承Thread线程和实现一个监听的接口</p>
+<h3 id="遗留问题-1"><a href="#遗留问题-1" class="headerlink" title="遗留问题"></a>遗留问题</h3><ul>
+<li>consumer一直在实例化，感觉这个问题不是很大，而且抛出异常的时候consumer设置为null也需要重新初始化，在方法里面的实例化对象应该只存活在方法里，<strong>方法里对象的生命周期</strong>。</li>
+<li>consumer也一直在start,感觉这个可能会产生一定的冲突，start也是一个线程运行，这样多次启动不同的start，感觉可能会有冲突</li>
+<li>综上所述，需要的应该是一个单个不断接受消息的consumer，抛出异常的时候再去进行初始化。</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>ROCKETMQ</tag>
+        <tag>MQ</tag>
+        <tag>文档</tag>
+        <tag>jacob</tag>
       </tags>
   </entry>
 </search>
